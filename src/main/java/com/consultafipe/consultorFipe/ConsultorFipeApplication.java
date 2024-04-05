@@ -11,7 +11,6 @@ public class ConsultorFipeApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ConsultorFipeApplication.class, args);
-
 	}
 
 	@Override
@@ -19,6 +18,5 @@ public class ConsultorFipeApplication implements CommandLineRunner {
 
 		Principal principal = new Principal();
 		principal.exibirMenu();
-		//teste
 	}
 }

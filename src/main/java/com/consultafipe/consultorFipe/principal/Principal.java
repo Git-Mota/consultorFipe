@@ -38,23 +38,8 @@ public class Principal {
 
 
         } else {
-            System.out.println("invalido");
+            System.out.println("Número inválido, tente novamente.");
         }
-    }
-
-    public void dadosVeiculo(int codModelo){
-
-       enderecoEditavel = enderecoEditavel + "/"+ codModelo+"/anos";
-        var json = consumo.obterDados(enderecoEditavel);
-        DadosConsultaAno[] dadosPesquisa = conversor.obterDados(json, DadosConsultaAno[].class);
-
-        List<DadosVeiculo> dadosVeiculo = new ArrayList<>(); // episodio
-        for (DadosConsultaAno m : dadosPesquisa){
-            String veiculoJson = consumo.obterDados(enderecoEditavel+"/"+m.codigo());
-            DadosVeiculo dados = conversor.obterDados(veiculoJson, DadosVeiculo.class);
-            dadosVeiculo.add(dados);
-        }
-        System.out.println(dadosVeiculo);
     }
     public static String retornaPesquisaTipoVeiculo(int recebeTipoVeiculo){
         switch (recebeTipoVeiculo){
@@ -79,24 +64,39 @@ public class Principal {
 
         var json = consumo.obterDados(recebeEnd);
 
-        List<DadosConsultaMarcas> pesquisa = new ArrayList<>();
-        DadosConsultaMarcas[] dadosPesquisa = conversor.obterDados(json, DadosConsultaMarcas[].class);
+        List<ModeloPesquisa> pesquisa = new ArrayList<>();
+        ModeloPesquisa[] dadosPesquisa = conversor.obterDados(json, ModeloPesquisa[].class);
         Collections.addAll(pesquisa, dadosPesquisa);
         System.out.println(pesquisa);
     }
     public static void pesquisaModelos(int recTipoVeiculo){
+
         enderecoEditavel = enderecoEditavel+"/"+recTipoVeiculo+"/modelos";
-        var json = consumo.obterDados( enderecoEditavel);
+
+        var json = consumo.obterDados(enderecoEditavel);
 
         List<ModeloPesquisa> pesquisa = new ArrayList<>();
         ModeloPesquisa dadosPesquisa = conversor.obterDados(json,ModeloPesquisa.class);
         pesquisa.add(dadosPesquisa);
 
-        List<DadosConsultaModelo> dadosModelo = pesquisa.stream()
+        pesquisa = pesquisa.stream()
                 .flatMap( t -> t.modelos().stream())
                 .collect(Collectors.toList());
-        System.out.println(dadosModelo);
+        System.out.println(pesquisa);
+    }
+    public void dadosVeiculo(int codModelo){
 
+        enderecoEditavel = enderecoEditavel + "/"+ codModelo+"/anos";
+        var json = consumo.obterDados(enderecoEditavel);
+        ModeloPesquisa[] dadosPesquisa = conversor.obterDados(json, ModeloPesquisa[].class);
+
+        List<DadosVeiculo> dadosVeiculo = new ArrayList<>();
+        for (ModeloPesquisa m : dadosPesquisa){
+            String veiculoJson = consumo.obterDados(enderecoEditavel+"/"+m.codigo());
+            DadosVeiculo dados = conversor.obterDados(veiculoJson, DadosVeiculo.class);
+            dadosVeiculo.add(dados);
+        }
+        System.out.println(dadosVeiculo);
     }
 }
 
