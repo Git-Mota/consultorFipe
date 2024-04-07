@@ -4,14 +4,14 @@ O Consultor FIPE é um programa Java projetado para fornecer informações detal
 
 ## Sumário 📋
 
-1. [Sobre o Projeto](#sobre-o-projeto-ℹ️)
-    - [Tecnologias Utilizadas](#tecnologias-utilizadas-🛠️)
-    - [Funcionalidades Principais](#funcionalidades-principais-🛠️)
-2. [Como Executar](#como-executar-🚀)
-3. [Contribuindo](#contribuindo-🤝)
-4. [Licença](#licença-📝)
+1. [Sobre o Projeto](#sobre-o-projeto)
+    - [Tecnologias Utilizadas](#tecnologias-utilizadas)
+    - [Funcionalidades Principais](#funcionalidades-principais)
+2. [Como Executar](#como-executar)
+3. [Contribuindo](#contribuindo)
+4. [Licença](#licença)
 
-## Sobre o Projeto ℹ️
+## Sobre o Projeto
 
 O Consultor FIPE é uma aplicação Java desenvolvida no framework Spring Boot com auxilio do Maven, tento como objetivo interagir com uma API externa fornecendo informações detalhadas sobre veículos.Abaixo, ofereço uma descrição técnica das principais classes e bibliotecas utilizadas neste programa:
 
@@ -41,7 +41,7 @@ Utiliza a anotação @JsonIgnoreProperties para ignorar propriedades desconhecid
 Implementa um método toString() personalizado para apresentar os dados de forma formatada.
 
 
-### Tecnologias Utilizadas 🛠️
+### Tecnologias Utilizadas
 
 **Linguagem de programação Utilizadas:** Java.
 
@@ -50,7 +50,7 @@ Implementa um método toString() personalizado para apresentar os dados de forma
 **Bibliotecas Utilizadas:** Jackson (com.fasterxml.jackson), HttpClient (java.net.http).
 
 
-### Funcionalidades Principais 🛠️
+### Funcionalidades Principais
 
 **Consulta de Marcas e Modelos:** O programa permite aos usuários selecionar o tipo de veículo (carro, moto ou caminhão) e consultar a lista de marcas disponíveis para o tipo selecionado. Em seguida, os usuários podem selecionar uma marca específica e visualizar os modelos associados a essa marca.
 
@@ -59,7 +59,7 @@ Implementa um método toString() personalizado para apresentar os dados de forma
 **Interface Interativa:** O programa apresenta uma interface interativa por meio da linha de comando, onde os usuários podem navegar facilmente pelas opções disponíveis e realizar consultas de forma intuitiva.
 
 
-## Como Executar 🚀
+## Como Executar
 
 Para executar o arquivo .jar do projeto, certifique-se de ter o JDK 17 instalado em seu sistema. Em seguida, siga estas etapas:
 
@@ -80,7 +80,7 @@ Após executar esse comando, a aplicação deve iniciar normalmente. Certifique-
 
 <h3>Se preferir você pode carregar, compilar e executar o projeto em uma IDE de preferência.  
 
-## Contribuindo 🤝
+## Contribuindo
 
 Instruções para contribuir com o projeto, seja através de sugestões, relatórios de bugs, solicitações de funcionalidades ou até mesmo envio de código.
 
@@ -90,7 +90,7 @@ Instruções para contribuir com o projeto, seja através de sugestões, relató
 4. Faça push para a branch (`git push origin feature/nova-feature`).
 5. Crie um novo Pull Request.
 
-## Licença 📝
+## Licença
 
 MIT License
 
