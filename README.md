@@ -6,7 +6,7 @@ O Consultor FIPE é um programa Java projetado para fornecer informações detal
 
 1. [Sobre o Projeto](#sobre-o-projeto)
     - [Tecnologias Utilizadas](#tecnologias-utilizadas)
-    - [Funcionalidades Principais:](#tecnologias-utilizadas)
+    - [Funcionalidades Principais:](#funcionalidades-principais)
 2. [Como Usar](#como-usar)
 3. [Como Executar](#como-executar)
 4. [Contribuindo](#contribuindo)
