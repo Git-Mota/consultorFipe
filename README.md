@@ -79,7 +79,7 @@ java -jar consultorFipe.jar
 
 Após executar esse comando, a aplicação deve iniciar normalmente. Certifique-se de que todas as dependências necessárias estão corretamente configuradas e que o arquivo .jar foi está no diretório correto.
 
-### Se preferir você pode carregar, compilar e executar o projeto em uma IDE de preferência.  
+<h3>Se preferir você pode carregar, compilar e executar o projeto em uma IDE de preferência.  
 
 ## Contribuindo 🤝
 
